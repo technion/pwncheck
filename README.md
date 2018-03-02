@@ -11,6 +11,9 @@ $ lein run passwordergergweg
 No passwords were found
 ```
 
+## More information
+
+Does NOT send passwords off your own machine. More information: https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/
 
 ## License
 
