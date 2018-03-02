@@ -36,14 +36,16 @@
 
 (defn cleanmatch
   [passmatch]
-  (str "The password has been seen " ((str/split passmatch #":") 1) "times"))
+  (str "The password has been seen " ((str/split passmatch #":") 1) " times"))
 
 (defn checkmatches
   [matches]
-  (if (empty? matches) "No passwords were found" (cleanmatch matches)))
+  (if (empty? matches) "No passwords were found"
+    (cleanmatch (first matches))))
 
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println
+    (checkmatches (makematches (first args)))))

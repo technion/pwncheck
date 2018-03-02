@@ -4,13 +4,13 @@ Check a password against the Pwned Passwords API. This allows you to check a pas
 
 ## Usage
 
-FIXME: explanation
+```
+$ lein run password
+The password has been seen 3303003 times
+$ lein run passwordergergweg
+No passwords were found
+```
 
-    $ java -jar pwncheck-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
 
 ## License
 
