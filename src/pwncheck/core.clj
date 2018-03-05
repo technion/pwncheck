@@ -36,12 +36,14 @@
 
 (defn cleanmatch
   [passmatch]
-  (str "The password has been seen " ((str/split passmatch #":") 1) " times"))
+  (str "The password has been seen "
+    (get (str/split passmatch #":") 1 0) " times"))
 
 (defn checkmatches
   [matches]
-  (if (empty? matches) "No passwords were found"
-    (cleanmatch (first matches))))
+  (if-let [f (first matches)]
+  (cleanmatch f)
+  "No passwords were found"))
 
 
 (defn -main
