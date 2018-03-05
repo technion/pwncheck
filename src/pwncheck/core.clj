@@ -49,5 +49,7 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
+  (if-let [p (first args)]
   (println
-    (checkmatches (makematches (first args)))))
+    (checkmatches (makematches p)))
+  (println "No password provided")))
